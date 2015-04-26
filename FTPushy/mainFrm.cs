@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * 
+ * 
+ * Copyright ©  2015 The Sheeps - Armin Hasanpour and Kousha Nakhaei - The idea credit goes for Kousha Nakhaei *
+ * 
+ * 
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
