@@ -1,0 +1,10 @@
+F:\VisualStudioProjects\XCopy\XCopy\bin\Debug\XCopy.exe.config
+F:\VisualStudioProjects\XCopy\XCopy\bin\Debug\XCopy.exe
+F:\VisualStudioProjects\XCopy\XCopy\bin\Debug\XCopy.pdb
+F:\VisualStudioProjects\XCopy\XCopy\obj\Debug\XCopy.csprojResolveAssemblyReference.cache
+F:\VisualStudioProjects\XCopy\XCopy\obj\Debug\XCopy.mainFrm.resources
+F:\VisualStudioProjects\XCopy\XCopy\obj\Debug\XCopy.Properties.Resources.resources
+F:\VisualStudioProjects\XCopy\XCopy\obj\Debug\XCopy.csproj.GenerateResource.Cache
+F:\VisualStudioProjects\XCopy\XCopy\obj\Debug\XCopy.exe
+F:\VisualStudioProjects\XCopy\XCopy\obj\Debug\XCopy.pdb
+F:\VisualStudioProjects\XCopy\XCopy\obj\Debug\XCopy.settingFrm.resources
