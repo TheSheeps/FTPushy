@@ -44,7 +44,6 @@ namespace FTPushy
             sourceStr = lines[1].ToLower(); //toLower() to make it standard for comparisions
             destStr = lines[0].ToLower();
 
-            changeStatus((destStr + "\\clone.txt").ToString());
             if (File.Exists(destStr + "\\clone.txt")) //TODO: Add to Setting form
             {
                 changeStatus("Clone Folders...");
@@ -58,7 +57,7 @@ namespace FTPushy
                 File.Delete(destStr + "\\go.txt"); //TODO: Add exception
                 directoryCopy(destStr, sourceStr, true);
             }
-            //changeStatus("Idle");
+            changeStatus("Idle");
         }
 
         private void changeStatus(string status)
