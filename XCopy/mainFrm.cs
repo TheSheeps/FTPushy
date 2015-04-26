@@ -25,7 +25,7 @@ namespace FTPushy
                 chkTimer.Enabled = true;
             }
         }
-        int a = 0;//TODO: Must be deleted
+
         private void onTimedEvent(object sender, System.Timers.ElapsedEventArgs e)
         {
             if (isRuning)
@@ -35,20 +35,25 @@ namespace FTPushy
 
             if (File.Exists(lines[1] + "\\clone.txt")) //TODO: Add to Setting form
             {
+                changeStatus("Clone Folders...");
                 File.Delete(lines[1] + "\\clone.txt"); //TODO: Add exception
                 directoryCopy(lines[0], lines[1], false);
             }
 
             if (File.Exists(lines[1] + "\\go.txt")) //TODO: Add to Setting form
             {
+                changeStatus("Moving...");
                 File.Delete(lines[1] + "\\go.txt"); //TODO: Add exception
                 directoryCopy(lines[1], lines[0], true);
             }
+            changeStatus("Idle");
+        }
 
-            this.BeginInvoke(new MethodInvoker(delegate 
+        private void changeStatus(string status)
+        {
+            this.BeginInvoke(new MethodInvoker(delegate
             {
-                this.statusLbl.Text = a.ToString();//TODO: Must be deleted
-                a++;//TODO: Must be deleted
+                this.statusLbl.Text = "Status: " + status;
             }));
         }
 

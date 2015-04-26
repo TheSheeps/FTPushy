@@ -38,7 +38,7 @@
             this.settingLbl.AutoSize = true;
             this.settingLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.settingLbl.LinkColor = System.Drawing.Color.Black;
-            this.settingLbl.Location = new System.Drawing.Point(211, 9);
+            this.settingLbl.Location = new System.Drawing.Point(153, 9);
             this.settingLbl.Name = "settingLbl";
             this.settingLbl.Size = new System.Drawing.Size(40, 13);
             this.settingLbl.TabIndex = 0;
@@ -49,17 +49,17 @@
             // statusLbl
             // 
             this.statusLbl.AutoSize = true;
-            this.statusLbl.Location = new System.Drawing.Point(52, 48);
+            this.statusLbl.Location = new System.Drawing.Point(48, 34);
             this.statusLbl.Name = "statusLbl";
-            this.statusLbl.Size = new System.Drawing.Size(40, 13);
+            this.statusLbl.Size = new System.Drawing.Size(60, 13);
             this.statusLbl.TabIndex = 1;
-            this.statusLbl.Text = "Status:";
+            this.statusLbl.Text = "Status: Idle";
             // 
             // mainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(263, 109);
+            this.ClientSize = new System.Drawing.Size(198, 66);
             this.Controls.Add(this.statusLbl);
             this.Controls.Add(this.settingLbl);
             this.Name = "mainFrm";
