@@ -21,6 +21,8 @@ namespace FTPushy
     public partial class mainFrm : Form
     {
         bool isRuning = false;
+        string sourceStr = "";
+        string destStr = "";
 
         private static System.Timers.Timer chkTimer = new System.Timers.Timer(10000); //TODO: Add to Setting form
         public mainFrm()
@@ -39,21 +41,24 @@ namespace FTPushy
                 return;
 
             string[] lines = File.ReadAllLines(settingFrm.configPath);
+            sourceStr = lines[1].ToLower(); //toLower() to make it standard for comparisions
+            destStr = lines[0].ToLower();
 
-            if (File.Exists(lines[1] + "\\clone.txt")) //TODO: Add to Setting form
+            changeStatus((destStr + "\\clone.txt").ToString());
+            if (File.Exists(destStr + "\\clone.txt")) //TODO: Add to Setting form
             {
                 changeStatus("Clone Folders...");
-                File.Delete(lines[1] + "\\clone.txt"); //TODO: Add exception
-                directoryCopy(lines[0], lines[1], false);
+                File.Delete(destStr + "\\clone.txt"); //TODO: Add exception
+                directoryCopy(sourceStr, destStr, false);
             }
 
-            if (File.Exists(lines[1] + "\\go.txt")) //TODO: Add to Setting form
+            if (File.Exists(destStr + "\\go.txt")) //TODO: Add to Setting form
             {
                 changeStatus("Moving...");
-                File.Delete(lines[1] + "\\go.txt"); //TODO: Add exception
-                directoryCopy(lines[1], lines[0], true);
+                File.Delete(destStr + "\\go.txt"); //TODO: Add exception
+                directoryCopy(destStr, sourceStr, true);
             }
-            changeStatus("Idle");
+            //changeStatus("Idle");
         }
 
         private void changeStatus(string status)
