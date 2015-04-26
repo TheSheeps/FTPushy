@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XCopy", "XCopy\XCopy.csproj", "{3CA2D2F9-95B9-47C8-8EBE-1C91A595331F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTPushy", "XCopy\FTPushy.csproj", "{3CA2D2F9-95B9-47C8-8EBE-1C91A595331F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

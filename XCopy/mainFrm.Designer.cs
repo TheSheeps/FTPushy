@@ -1,4 +1,4 @@
-﻿namespace XCopy
+﻿namespace FTPushy
 {
     partial class mainFrm
     {
@@ -63,7 +63,7 @@
             this.Controls.Add(this.statusLbl);
             this.Controls.Add(this.settingLbl);
             this.Name = "mainFrm";
-            this.Text = "XCopy";
+            this.Text = "FTPushy";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -73,6 +73,7 @@
 
         private System.Windows.Forms.LinkLabel settingLbl;
         private System.Windows.Forms.Label statusLbl;
+        private System.Windows.Forms.Timer timer;
     }
 }
 

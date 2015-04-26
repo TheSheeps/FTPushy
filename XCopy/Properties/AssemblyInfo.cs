@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("XCopy")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("FTPushy")]
+[assembly: AssemblyDescription("FTP Atomic Upload Pusher!")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("XCopy")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCompany("The Sheeps")]
+[assembly: AssemblyProduct("FTPushy")]
+[assembly: AssemblyCopyright("Copyright ©  2015 The Sheeps - Armin Hasanpour and Kousha Nakhaei - The idea credit goes for Kousha Nakhaei")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

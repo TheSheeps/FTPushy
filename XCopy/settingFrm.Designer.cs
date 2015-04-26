@@ -1,4 +1,4 @@
-﻿namespace XCopy
+﻿namespace FTPushy
 {
     partial class settingFrm
     {
