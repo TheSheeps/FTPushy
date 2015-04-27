@@ -31,3 +31,5 @@ Now, you can upload **MyCode.dll** in `c:\www\_temp\bin`, and then upload `go.tx
 
 1. `go.txt`: Go! Move all the uploaded files from temp to production, and clean the temp.
 2. `clone.txt`: Clone all production folders (without files) in temp folder.
+
+Note 1: This command files content is not important. If they become available with this name in the root of your defined `\_temp` folder, it would be all.
