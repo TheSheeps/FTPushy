@@ -32,6 +32,8 @@
             this.toLbl = new System.Windows.Forms.Label();
             this.fromTxtBox = new System.Windows.Forms.TextBox();
             this.toTxtBox = new System.Windows.Forms.TextBox();
+            this.buttonSourceChoose = new System.Windows.Forms.Button();
+            this.buttonDestChooser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // fromLbl
@@ -46,7 +48,7 @@
             // toLbl
             // 
             this.toLbl.AutoSize = true;
-            this.toLbl.Location = new System.Drawing.Point(12, 93);
+            this.toLbl.Location = new System.Drawing.Point(12, 74);
             this.toLbl.Name = "toLbl";
             this.toLbl.Size = new System.Drawing.Size(46, 13);
             this.toLbl.TabIndex = 1;
@@ -61,16 +63,39 @@
             // 
             // toTxtBox
             // 
-            this.toTxtBox.Location = new System.Drawing.Point(75, 90);
+            this.toTxtBox.Location = new System.Drawing.Point(75, 71);
             this.toTxtBox.Name = "toTxtBox";
             this.toTxtBox.Size = new System.Drawing.Size(235, 20);
             this.toTxtBox.TabIndex = 3;
+            this.toTxtBox.TextChanged += new System.EventHandler(this.toTxtBox_TextChanged);
+            // 
+            // buttonSourceChoose
+            // 
+            this.buttonSourceChoose.Location = new System.Drawing.Point(316, 19);
+            this.buttonSourceChoose.Name = "buttonSourceChoose";
+            this.buttonSourceChoose.Size = new System.Drawing.Size(69, 32);
+            this.buttonSourceChoose.TabIndex = 4;
+            this.buttonSourceChoose.Text = "Choose";
+            this.buttonSourceChoose.UseVisualStyleBackColor = true;
+            this.buttonSourceChoose.Click += new System.EventHandler(this.buttonSourceChoose_Click);
+            // 
+            // buttonDestChooser
+            // 
+            this.buttonDestChooser.Location = new System.Drawing.Point(316, 64);
+            this.buttonDestChooser.Name = "buttonDestChooser";
+            this.buttonDestChooser.Size = new System.Drawing.Size(69, 32);
+            this.buttonDestChooser.TabIndex = 5;
+            this.buttonDestChooser.Text = "Choose";
+            this.buttonDestChooser.UseVisualStyleBackColor = true;
+            this.buttonDestChooser.Click += new System.EventHandler(this.buttonDestChooser_Click);
             // 
             // settingFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 140);
+            this.ClientSize = new System.Drawing.Size(397, 140);
+            this.Controls.Add(this.buttonDestChooser);
+            this.Controls.Add(this.buttonSourceChoose);
             this.Controls.Add(this.toTxtBox);
             this.Controls.Add(this.fromTxtBox);
             this.Controls.Add(this.toLbl);
@@ -92,5 +117,7 @@
         private System.Windows.Forms.Label toLbl;
         private System.Windows.Forms.TextBox fromTxtBox;
         private System.Windows.Forms.TextBox toTxtBox;
+        private System.Windows.Forms.Button buttonSourceChoose;
+        private System.Windows.Forms.Button buttonDestChooser;
     }
 }

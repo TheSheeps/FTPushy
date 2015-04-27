@@ -23,8 +23,9 @@ namespace FTPushy
         bool isRuning = false;
         string sourceStr = "";
         string destStr = "";
+        bool doDebug = false;
 
-        private static System.Timers.Timer chkTimer = new System.Timers.Timer(10000); //TODO: Add to Setting form
+        private static System.Timers.Timer chkTimer = new System.Timers.Timer(1000); //TODO: Add to Setting form
         public mainFrm()
         {
             InitializeComponent();
@@ -44,18 +45,18 @@ namespace FTPushy
             sourceStr = lines[1].ToLower(); //toLower() to make it standard for comparisions
             destStr = lines[0].ToLower();
 
-            if (File.Exists(destStr + "\\clone.txt")) //TODO: Add to Setting form
+            if (File.Exists(sourceStr + "\\clone.txt")) //TODO: Add to Setting form
             {
                 changeStatus("Clone Folders...");
-                File.Delete(destStr + "\\clone.txt"); //TODO: Add exception
-                directoryCopy(sourceStr, destStr, false);
+                File.Delete(sourceStr + "\\clone.txt"); //TODO: Add exception
+                directoryCopy(destStr, sourceStr, false);
             }
 
-            if (File.Exists(destStr + "\\go.txt")) //TODO: Add to Setting form
+            if (File.Exists(sourceStr + "\\go.txt")) //TODO: Add to Setting form
             {
                 changeStatus("Moving...");
-                File.Delete(destStr + "\\go.txt"); //TODO: Add exception
-                directoryCopy(destStr, sourceStr, true);
+                File.Delete(sourceStr + "\\go.txt"); //TODO: Add exception
+                directoryCopy(sourceStr, destStr, true);
             }
             changeStatus("Idle");
         }
@@ -65,6 +66,7 @@ namespace FTPushy
             this.BeginInvoke(new MethodInvoker(delegate
             {
                 this.statusLbl.Text = "Status: " + status;
+                if (doDebug) this.listBoxLog.Items.Add(status);
             }));
         }
 
@@ -75,12 +77,24 @@ namespace FTPushy
             DirectoryInfo dir = new DirectoryInfo(src);
             DirectoryInfo[] dirs = dir.GetDirectories();
 
+            bool doAction = true;
+            if (move)
+            {
+                if (dst.ToLower().StartsWith(sourceStr)) doAction = false; //do not clone "source" if it is a subfolder
+                changeStatus("[a]:" + dst + " - " + sourceStr);
+            }
+            else //clone folders
+            {
+                if (src.ToLower().StartsWith(sourceStr)) doAction = false; //do not clone "source" if it is a subfolder
+                changeStatus("[b]:" + src);
+            }
+
             //TODO: if (!dir.Exists) Exception
 
-            if (!Directory.Exists(dst))
+            if (!Directory.Exists(dst) && doAction)
                 Directory.CreateDirectory(dst);
 
-            if (move)
+            if (move && doAction)
             {
                 FileInfo[] files = dir.GetFiles();
                 foreach (FileInfo file in files)

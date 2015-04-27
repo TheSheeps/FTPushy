@@ -26,7 +26,6 @@ F:\Projects\Source Codes\Github\FTPushy\FTPushy\obj\Debug\FTPushy.exe
 F:\Projects\Source Codes\Github\FTPushy\FTPushy\obj\Debug\FTPushy.pdb
 F:\Projects\Source Codes\Github\FTPushy\FTPushy\bin\Debug\FTPushy.exe
 F:\Projects\Source Codes\Github\FTPushy\FTPushy\bin\Debug\FTPushy.pdb
-F:\Projects\Source Codes\Github\FTPushy\FTPushy\obj\Debug\FTPushy.csprojResolveAssemblyReference.cache
 F:\Projects\Source Codes\Github\FTPushy\FTPushy\obj\Debug\FTPushy.mainFrm.resources
 F:\Projects\Source Codes\Github\FTPushy\FTPushy\obj\Debug\FTPushy.Properties.Resources.resources
 F:\Projects\Source Codes\Github\FTPushy\FTPushy\obj\Debug\FTPushy.settingFrm.resources
