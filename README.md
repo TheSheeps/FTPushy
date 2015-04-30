@@ -14,6 +14,8 @@ FTPushy is a standalone Windows application. You need to run and configure it in
 1. Source Path
 2. Destination Path
 
+Just [DOWNLOAD](https://github.com/TheSheeps/FTPushy/releases) `FTPushy.exe` and `config.ini` and put them together in a single folder. You may want to make a shortcut to run it in Windows startup.
+
 ## How to use?
 FTPushy is made with a principle in mind: Do everything just by using a FTP client. So, after setting up the application, you no longer need to do a remote desktop (Of course, if you want to do a remote desktop all the time, you could manually copy them. This app is made to accelerate, and it will do it!). Just upload your files in the defined **temp** folder, and upload **go.txt** to trigger the move. That's it.
 
