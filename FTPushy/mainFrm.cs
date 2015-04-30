@@ -25,7 +25,7 @@ namespace FTPushy
         string destStr = "";
         bool doDebug = false;
 
-        private static System.Timers.Timer chkTimer = new System.Timers.Timer(1000); //TODO: Add to Setting form
+        private static System.Timers.Timer chkTimer = new System.Timers.Timer(10000); //TODO: Add to Setting form
         public mainFrm()
         {
             InitializeComponent();
