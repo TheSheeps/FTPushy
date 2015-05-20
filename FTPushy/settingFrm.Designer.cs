@@ -34,6 +34,7 @@
             this.toTxtBox = new System.Windows.Forms.TextBox();
             this.buttonSourceChoose = new System.Windows.Forms.Button();
             this.buttonDestChooser = new System.Windows.Forms.Button();
+            this.checkBoxRunStartup = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // fromLbl
@@ -89,11 +90,23 @@
             this.buttonDestChooser.UseVisualStyleBackColor = true;
             this.buttonDestChooser.Click += new System.EventHandler(this.buttonDestChooser_Click);
             // 
+            // checkBoxRunStartup
+            // 
+            this.checkBoxRunStartup.AutoSize = true;
+            this.checkBoxRunStartup.Location = new System.Drawing.Point(15, 101);
+            this.checkBoxRunStartup.Name = "checkBoxRunStartup";
+            this.checkBoxRunStartup.Size = new System.Drawing.Size(140, 17);
+            this.checkBoxRunStartup.TabIndex = 6;
+            this.checkBoxRunStartup.Text = "Run at Windows startup";
+            this.checkBoxRunStartup.UseVisualStyleBackColor = true;
+            this.checkBoxRunStartup.CheckedChanged += new System.EventHandler(this.checkBoxRunStartup_CheckedChanged);
+            // 
             // settingFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(397, 140);
+            this.Controls.Add(this.checkBoxRunStartup);
             this.Controls.Add(this.buttonDestChooser);
             this.Controls.Add(this.buttonSourceChoose);
             this.Controls.Add(this.toTxtBox);
@@ -119,5 +132,6 @@
         private System.Windows.Forms.TextBox toTxtBox;
         private System.Windows.Forms.Button buttonSourceChoose;
         private System.Windows.Forms.Button buttonDestChooser;
+        private System.Windows.Forms.CheckBox checkBoxRunStartup;
     }
 }

@@ -16,6 +16,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Microsoft.Win32;
 
 namespace FTPushy
 {
@@ -34,6 +35,9 @@ namespace FTPushy
                 string[] lines = File.ReadAllLines(configPath);
                 fromTxtBox.Text = lines[1];
                 toTxtBox.Text = lines[0];
+
+                RegistryKey reg = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+                checkBoxRunStartup.Checked = !(reg.GetValue("FTPushy") == null);
             }
         }
 
@@ -62,6 +66,17 @@ namespace FTPushy
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             DialogResult result = fbd.ShowDialog();
             if (fbd.SelectedPath.Length > 0) toTxtBox.Text = fbd.SelectedPath;
+        }
+
+        private void checkBoxRunStartup_CheckedChanged(object sender, EventArgs e)
+        {
+            RegistryKey reg = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+
+            if (checkBoxRunStartup.Checked)
+                reg.SetValue("FTPushy", Application.ExecutablePath.ToString());
+            else
+                reg.DeleteValue("FTPushy", false);            
+
         }
     }
 }
